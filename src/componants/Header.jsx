@@ -9,7 +9,7 @@ function Header({ addTodo }) {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>My To-Do List</h1>
 
       <input
@@ -19,7 +19,7 @@ function Header({ addTodo }) {
         placeholder="Enter task"
       />
 
-      <button onClick={handleAdd}>Add</button>
+      <button  className="add-btn" onClick={handleAdd}>Add</button>
     </div>
   );
 }

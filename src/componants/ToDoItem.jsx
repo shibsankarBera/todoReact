@@ -23,21 +23,18 @@ const ToDoItem = ({ todo, deleteTodo, editTodo, toggleComplete }) => {
         <>
           <span>{todo.id}</span>
           <span
-            style={{
-              textDecoration: todo.completed ? "line-through" : "none",
-              color: todo.completed ? "green" : "black",
-            }}
+            className={todo.completed ? "done" : ""}
           >
             {todo.text}
           </span>
 
-          <button onClick={() => toggleComplete(todo.id)}>
-            {todo.completed ? "Undo" : "Complete"}
+          <button className="complete-btn"  onClick={() => toggleComplete(todo.id)}>
+            {todo.completed ? "Undo" : "Done"}
           </button>
 
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button className="edit-btn" onClick={() => setIsEditing(true)}>Edit</button>
 
-          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+          <button  className="delete-btn" onClick={() => deleteTodo(todo.id)}>Delete</button>
         </>
       )}
     </li>
