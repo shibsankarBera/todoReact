@@ -1,7 +1,7 @@
 import React from 'react'
 import ToDoItem from './ToDoItem'
 
-const ToDoList = ({ todos,deleteTodo,editTodo}) => {
+const ToDoList = ({ todos,deleteTodo,editTodo,toggleComplete}) => {
   
   return (
      <ul>
@@ -11,6 +11,7 @@ const ToDoList = ({ todos,deleteTodo,editTodo}) => {
           todo={todo} 
           deleteTodo={deleteTodo}
           editTodo={editTodo}
+            toggleComplete={toggleComplete}
         />
       ))}
     </ul>  )

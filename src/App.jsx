@@ -34,7 +34,19 @@ function App() {
 
     setTodos(updated);
   };
-  
+  // TOGGLE COMPLETE
+  const toggleComplete = (id) => {
+    const updated = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed: !todo.completed };
+      } else {
+        return todo;
+      }
+    });
+
+    setTodos(updated);
+  };
+
 
 
   return (
@@ -43,6 +55,7 @@ function App() {
       <ToDoList todos={todos} 
             deleteTodo={deleteTodo}
             editTodo={editTodo}
+             toggleComplete={toggleComplete}
       />
 
     </>
